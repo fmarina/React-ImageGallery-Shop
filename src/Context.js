@@ -16,7 +16,7 @@ function ContextProvider(props) {
     const toggleFavorite = (id) => {
         const photos = allPhotos.map(photo => (
             (photo.id === id)
-            ? (console.log(!photo.isFavorite), { ...photo, isFavorite : !photo.isFavorite})
+            ? { ...photo, isFavorite : !photo.isFavorite}
             : photo
         ));
         setAllPhotos(photos);
