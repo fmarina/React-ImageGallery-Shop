@@ -4,6 +4,7 @@ import CartItem from '../components/CartItem';
 
 const Cart = () => {
     const {cartItems} = useContext(Context);
+
     const cartItemElements = cartItems.map(item => (
         <CartItem key={item.id} item={item}/>
     ));
