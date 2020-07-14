@@ -27,14 +27,17 @@ function ContextProvider(props) {
         setCartItems(prevItems => [...prevItems, newItem]);
     }
 
+    const removeImageFromCart = (id) => {
+        setCartItems(prevItems => prevItems.filter(item => item.id !== id));
+    }
+    
     return (
         <Context.Provider value={{
-            allPhotos, toggleFavorite, addImageToCart, cartItems
+            allPhotos, toggleFavorite, cartItems, addImageToCart, removeImageFromCart
         }}>
             {props.children}
         </Context.Provider>
     );
-
 }
 
 export {ContextProvider, Context};
