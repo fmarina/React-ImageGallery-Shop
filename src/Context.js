@@ -13,8 +13,17 @@ function ContextProvider(props) {
             .then(data => setAllPhotos(data));
     }, []);
 
+    const toggleFavorite = (id) => {
+        const photos = allPhotos.map(photo => (
+            (photo.id === id)
+            ? (console.log(!photo.isFavorite), { ...photo, isFavorite : !photo.isFavorite})
+            : photo
+        ));
+        setAllPhotos(photos);
+    }
+
     return (
-        <Context.Provider value={{allPhotos}}>
+        <Context.Provider value={{allPhotos, toggleFavorite}}>
             {props.children}
         </Context.Provider>
     );

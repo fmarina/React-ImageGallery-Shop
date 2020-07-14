@@ -1,11 +1,18 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import {Context} from '../Context';
 
 const Image = ({className, img}) => {
     const [hovered, setHovered] = useState(false);
 
-    const heartIcon = hovered && <i className="ri-heart-line favorite"></i>
+    const {toggleFavorite} = useContext(Context);    
+
+    const heartIcon = hovered && 
+        <i className="ri-heart-line favorite" 
+           onClick={(e) => toggleFavorite(img.id)}>
+        </i>
     const cartIcon = hovered && <i className="ri-add-circle-line cart"></i>
     
+
     return (
         <div 
             className={`${className} image-container`}
