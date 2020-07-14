@@ -14,6 +14,8 @@
 
 body { font-family: 'Oswald', sans-serif; }
 
+h1 { text-align: center; }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -85,4 +87,52 @@ img.image-grid {
     cursor: pointer;
 }
 
+/* CART ITEM*/
 
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.cart-item img {
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.ri-delete-bin-line, .ri-delete-bin-fill {
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+/* CART PAGE*/
+
+main.cart-page {
+    padding: 10px;
+}
+
+.cart-page .total-cost {
+    text-align: right;
+    font-size: 1.3em;
+}
+
+.cart-page div.order-button {
+    display: flex;
+    justify-content: center;
+}
+
+div.order-button > button {
+    border-color: var(--black);
+    cursor: pointer;
+    padding: 15px;
+    transition: all .2s ease-in-out;
+}
+
+div.order-button > button:focus {
+    outline: none;
+}
+
+div.order-button > button:disabled {
+    border-color: lightgray;
+}

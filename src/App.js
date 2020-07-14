@@ -14,8 +14,6 @@ function App() {
         <Route exact path="/"><Photos/></Route>
         <Route path="/cart"><Cart/></Route>
       </Switch>
-      
-      <h1>Home page</h1>
     </div>
   );
 }
