@@ -34,6 +34,8 @@ a:hover { color: var(--light-blue); }
 
 a:active { color: var(--light-blue); }
 
+/* IMAGES */
+
 main.photos {
     padding: 10px;
     display: grid;
@@ -62,11 +64,28 @@ img.image-grid {
     grid-row: span 2;
 }
 
+/* ICONS */
+
 .ri-heart-fill {
     opacity: .7;
 }
 
-.ri-delete-bin-line, .ri-delete-bin-fill {
-    font-size: 1.3em;
+.favorite {
+    color: var(--red);
+    font-size: 1.2rem;
+    position: absolute;
+    top: 5px;
+    left: 5px;
     cursor: pointer;
 }
+
+.cart {
+    color: var(--blue);
+    font-size: 1.2rem;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+
