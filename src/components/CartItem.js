@@ -3,7 +3,7 @@ import {Context} from '../Context';
 
 const CartItem = ({item}) => {
     const {removeImageFromCart} = useContext(Context);
-    
+
     return (
         <div className="cart-item">           
             <i className="ri-delete-bin-line" 

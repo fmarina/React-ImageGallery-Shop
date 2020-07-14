@@ -9,12 +9,15 @@ const Cart = () => {
         <CartItem key={item.id} item={item}/>
     ));
 
+    const totalCost = 5.99 * cartItems.length;
+    const totalCostDisplay = totalCost.toLocaleString("en-US", {style: "currency", currency: "USD"});
+
     return (
         <main className="cart-page">
             <h1>Check Out</h1>
             <div className="container-cart">
                 {cartItemElements}
-                <p className="total-cost">Total: </p>
+                <p className="total-cost">Total: {totalCostDisplayq}</p>
                 <div className="order-button">
                     <button>Place Order</button>
                 </div>
