@@ -1,11 +1,11 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {Context} from '../Context';
 import PropTypes from 'prop-types';
 import useHover from '../hooks/useHover';
 
 const CartItem = ({item}) => {
     const [hovered, ref] = useHover();
-    
+
     const {removeImageFromCart} = useContext(Context);
 
     const iClassName = hovered ? "ri-delete-bin-fill" : "ri-delete-bin-line";
