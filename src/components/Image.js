@@ -30,7 +30,7 @@ const Image = ({className, img}) => {
     return (
         <div 
             className={`${className} image-container`}
-            onMouseOver={() => setHovered(true)}
+            onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}        
         >
             <img src={img.url} className="image-grid" alt="a pic" />
